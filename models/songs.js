@@ -15,5 +15,5 @@ export const getSongsByplaylistId = async (id) => {
 };
 
 export const deleteSongsByid = async (id) => {
-  return db("songs").where({ id: id });
+  return db("songs").where({ id: id }).delete();
 };

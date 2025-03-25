@@ -25,16 +25,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
     songs.forEach((song) => {
       const li = document.createElement("li");
-      // const myDivSong = document.createElement("div");
       li.classList.add("song-item");
-      li.innerHTML = `
-  <div class="song-info">
-    <strong>"${song.title}"</strong> by ${song.artist || "Unknown"}<br />
-    🎭 <strong>Mood:</strong> ${song.mood}<br />
-    📝 ${song.note || "<em>(no note)</em>"}
-  </div>
-`;
 
+      // song info container
+      const songInfo = document.createElement("div");
+      songInfo.classList.add("song-info");
+      songInfo.innerHTML = `
+        <strong>"${song.title}"</strong> by ${song.artist || "Unknown"}<br />
+        🎭 <strong>Mood:</strong> ${song.mood}<br />
+        📝 ${song.note || "<em>(no note)</em>"}
+        `;
+
+      // delete button
+      const deleteBtn = document.createElement("button");
+      deleteBtn.classList.add("delete-song");
+      deleteBtn.textContent = "Delete 🗑";
+
+      deleteBtn.addEventListener("click", async () => {
+        const confirmed = confirm(`Delete "${song.title}"?`);
+        if (!confirmed) return;
+
+        const res = await fetch(`/api/song/${song.id}`, {
+          method: "DELETE",
+        });
+
+        const data = await res.json();
+        alert(data.message || "Song deleted");
+        loadSongs(); // reload songs list
+      });
+
+      li.appendChild(songInfo);
+      li.appendChild(deleteBtn);
       songList.appendChild(li);
     });
   }
