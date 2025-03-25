@@ -15,15 +15,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const span = document.createElement("span");
       span.textContent = playlist.name;
 
-      // Boton eliminar
-      const deleteBtn = document.createElement("button");
-      deleteBtn.textContent = "🗑 Delete";
-      deleteBtn.classList = "mybutton";
-      deleteBtn.onclick = () => deletePlaylist(playlist.id);
-
       // Boton songs
       const songsBtn = document.createElement("button");
-      songsBtn.textContent = "Songs";
+      songsBtn.textContent = "🎵Songs";
       songsBtn.onclick = () => {
         window.location.href = `songs.html?id=${
           playlist.id
@@ -31,11 +25,17 @@ document.addEventListener("DOMContentLoaded", () => {
         // aqui uso encodeURIComponent porque playlist names could have spaces or special characters, we have to safely encode them for the URL
       };
 
+      // Boton eliminar
+      const deleteBtn = document.createElement("button");
+      deleteBtn.textContent = "🗑 Delete";
+      deleteBtn.classList = "mybutton";
+      deleteBtn.onclick = () => deletePlaylist(playlist.id);
+
       // Contenedor para los botones
       const buttonGroup = document.createElement("div");
       buttonGroup.classList.add("button-group");
-      buttonGroup.appendChild(deleteBtn);
       buttonGroup.appendChild(songsBtn);
+      buttonGroup.appendChild(deleteBtn);
 
       li.appendChild(span);
       li.appendChild(buttonGroup);

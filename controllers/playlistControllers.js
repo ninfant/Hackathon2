@@ -83,7 +83,7 @@ export const deleteSongsByID = async (req, res) => {
   const { id } = req.params;
   try {
     const deletebysongID = await songModel.deleteSongsByid(id);
-    res.status(200).json({ message: "song deleted ", deletebysongID });
+    res.status(200).json({ message: "Song deleted ", deletebysongID });
   } catch (error) {
     res.status(500).json({ message: "Error deleting the song" });
   }

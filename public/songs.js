@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // delete button
       const deleteBtn = document.createElement("button");
-      deleteBtn.classList.add("delete-song");
+      deleteBtn.classList = "mybutton";
       deleteBtn.textContent = "Delete 🗑";
 
       deleteBtn.addEventListener("click", async () => {
@@ -50,7 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         const data = await res.json();
-        alert(data.message || "Song deleted");
         loadSongs(); // reload songs list
       });
 
@@ -78,7 +77,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const data = await res.json();
-    alert(data.message || "Song added!");
     songForm.reset();
     loadSongs();
   });
