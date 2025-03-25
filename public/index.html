@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mood-Based Playlist Journal</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>🎧 Mood-Based Playlist Journal</h1>
+    <h2>Your Playlists</h2>
+
+    <ul id="playlistList">
+      <!-- Filled dynamically with JS -->
+    </ul>
+
+    <h2>Create New Playlist</h2>
+    <form id="playlistForm">
+      <input
+        type="text"
+        id="playlistName"
+        placeholder="Enter playlist name..."
+        required
+      />
+      <button type="submit">Create</button>
+    </form>
+
+    <script src="index.js"></script>
+  </body>
+</html>

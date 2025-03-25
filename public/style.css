@@ -1,0 +1,100 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f3f4f6;
+  padding: 2rem;
+  max-width: 600px;
+  margin: auto;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+form {
+  margin-top: 1rem;
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  padding: 10px;
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 5px 10px;
+  background: #0077ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+a {
+  display: flex;
+  align-items: center; /* vertical align */
+  justify-content: center;
+  margin-top: 20px;
+  width: fit-content;
+  padding: 10px 16px;
+  background: #0077ff;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none; /* removes underline */
+  font-weight: bold;
+  gap: 8px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  background: white;
+  padding: 8px 13px;
+  margin-bottom: 10px;
+  border-left: 5px solid #0077ff;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mybutton {
+  background-color: #c31279;
+  border-left: none;
+  padding: 6px 8px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mybutton:hover {
+  background-color: #a10f63;
+}
+.button-group {
+  /* este div encierra los botones eliminar y songs */
+  display: flex;
+  gap: 8px; /* espacio entre los botones */
+}
+
+.song-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: white;
+  padding: 12px 15px;
+  border-left: 5px solid #0077ff;
+  border-radius: 5px;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}

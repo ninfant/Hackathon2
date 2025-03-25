@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Songs in Playlist</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 id="playlistTitle">🎵 Playlist</h1>
+
+    <ul id="songList">
+      <!-- the songs will be added here -->
+    </ul>
+
+    <h2>Add a New Song</h2>
+    <form id="songForm">
+      <input type="text" id="title" placeholder="Song Title" required />
+      <input type="text" id="artist" placeholder="Artist" />
+      <select id="mood" required>
+        <option value="">Select mood</option>
+        <option value="Happy">Happy</option>
+        <option value="Sad">Sad</option>
+        <option value="Chill">Chill</option>
+        <option value="Motivated">Motivated</option>
+        <option value="Melancholy">Melancholy</option>
+      </select>
+      <textarea id="note" placeholder="Why this song matters..."></textarea>
+      <button type="submit">Add Song</button> <br />
+    </form>
+    <a href="index.html">⬅️ Back to Playlists</a>
+    <script src="songs.js"></script>
+  </body>
+</html>
